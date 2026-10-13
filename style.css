@@ -1,0 +1,274 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #333;
+    line-height: 1.6;
+}
+
+.navbar {
+    background: #063b5c;
+    color: white;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.navbar h2 {
+    color: #ffc857;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: #ffc857;
+}
+
+.hero {
+    min-height: 400px;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.45),
+                        rgba(0, 0, 0, 0.45)),
+        url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1600")
+        center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 40px 20px;
+}
+
+.hero-content h1 {
+    font-size: 46px;
+    margin-bottom: 12px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #ffc857;
+    color: #063b5c;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.section {
+    padding: 50px 8%;
+    text-align: center;
+}
+
+.section h2 {
+    color: #063b5c;
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+
+.destination-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.destination-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding-bottom: 20px;
+    transition: transform 0.3s;
+}
+
+.destination-card:hover {
+    transform: translateY(-5px);
+}
+
+.destination-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.destination-card h3 {
+    margin: 12px 0;
+    color: #063b5c;
+}
+
+.destination-card p {
+    padding: 0 12px;
+}
+
+.price {
+    color: #087f5b;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    background: #087f5b;
+    color: white;
+    padding: 11px 20px;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+button:hover {
+    background: #056044;
+}
+
+.booking-section {
+    background: #e8f2f8;
+}
+
+form {
+    max-width: 550px;
+    margin: auto;
+    background: white;
+    padding: 28px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    text-align: left;
+}
+
+form label {
+    display: block;
+    margin-top: 14px;
+    font-weight: bold;
+}
+
+form input,
+form select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+form input:focus,
+form select:focus {
+    outline: 2px solid #5aa9e6;
+    border-color: #5aa9e6;
+}
+
+.total-box {
+    margin: 22px 0;
+    padding: 15px;
+    background: #e6f6ee;
+    color: #087f5b;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+.submit-btn {
+    width: 100%;
+    background: #063b5c;
+}
+
+.submit-btn:hover {
+    background: #09537c;
+}
+
+#message {
+    margin: 18px auto 0;
+    max-width: 550px;
+    font-weight: bold;
+}
+
+.booking-item {
+    background: white;
+    max-width: 650px;
+    margin: 15px auto;
+    padding: 20px;
+    text-align: left;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    overflow-wrap: anywhere;
+}
+
+.booking-item h3 {
+    color: #063b5c;
+}
+
+.booking-item p {
+    margin: 5px 0;
+}
+
+.cancel-btn {
+    background: #d62828;
+    margin-top: 12px;
+}
+
+.cancel-btn:hover {
+    background: #a4161a;
+}
+
+.empty-message {
+    color: #666;
+}
+
+footer {
+    background: #063b5c;
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        justify-content: center;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .hero-content h1 {
+        font-size: 34px;
+    }
+
+    .destination-container {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 35px 5%;
+    }
+
+    form {
+        padding: 20px;
+    }
+}

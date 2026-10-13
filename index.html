@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Booking Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <h2>TravelGo</h2>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#destinations">Destinations</a>
+                <a href="#booking">Book Trip</a>
+                <a href="#history">My Bookings</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Explore the World</h1>
+            <p>Discover beautiful places and make unforgettable memories.</p>
+            <a href="#booking" class="btn">Book Your Trip</a>
+        </div>
+    </section>
+
+    <section class="section" id="destinations">
+        <h2>Popular Destinations</h2>
+        <div class="destination-container">
+
+            <div class="destination-card">
+                <img src="https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=600"
+                     alt="Taj Mahal in Agra">
+                <h3>Agra</h3>
+                <p>Explore India's beautiful Taj Mahal.</p>
+                <p class="price">₹5,000 / person</p>
+                <button onclick="selectDestination('Agra')">Book Now</button>
+            </div>
+
+            <div class="destination-card">
+                <img src="https://images.unsplash.com/photo-1595815771614-ade9d652a65d?w=600"
+                     alt="Beautiful mountains in Manali">
+                <h3>Manali</h3>
+                <p>Enjoy mountains and cool weather.</p>
+                <p class="price">₹8,000 / person</p>
+                <button onclick="selectDestination('Manali')">Book Now</button>
+            </div>
+
+            <div class="destination-card">
+                <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=600"
+                     alt="Beach in Goa">
+                <h3>Goa</h3>
+                <p>Relax on beaches and enjoy the sunshine.</p>
+                <p class="price">₹6,000 / person</p>
+                <button onclick="selectDestination('Goa')">Book Now</button>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section booking-section" id="booking">
+        <h2>Book Your Trip</h2>
+
+        <form id="bookingForm">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+
+            <label for="destination">Choose Destination</label>
+            <select id="destination" required>
+                <option value="">Select a destination</option>
+                <option value="Agra">Agra - ₹5,000/person</option>
+                <option value="Manali">Manali - ₹8,000/person</option>
+                <option value="Goa">Goa - ₹6,000/person</option>
+            </select>
+
+            <label for="travelDate">Travel Date</label>
+            <input type="date" id="travelDate" required>
+
+            <label for="travelers">Number of Travelers</label>
+            <input type="number" id="travelers" min="1" max="20"
+                   value="1" required>
+
+            <div class="total-box">
+                Total Price: <span id="totalPrice">₹0</span>
+            </div>
+
+            <button type="submit" class="submit-btn">
+                Confirm Booking
+            </button>
+        </form>
+
+        <div id="message" role="status"></div>
+    </section>
+
+    <section class="section" id="history">
+        <h2>My Bookings</h2>
+        <div id="bookingList">
+            <p class="empty-message">No bookings yet. Book your first trip!</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 TravelGo. All rights reserved.</p>
+        <p>Explore More, Worry Less!</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
